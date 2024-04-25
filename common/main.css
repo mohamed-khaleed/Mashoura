@@ -1,0 +1,116 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'yellix', sans-serif;
+  background-color: #f5f5f5;
+}
+
+.container {
+  /* 1140px */
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+ 
+  /* Only necessary for .btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+
+  /* Put transition on original "state" */
+  /* transition: background-color 0.3s; */
+  transition: all 0.3s;
+}
+
+.btn--blueGreen{
+  background-color: #54E8E0;
+  color: #11002A;
+
+}
+.btn--purple{
+  background-color: #6200EE;
+  color: #FFFFFF;
+}
+.btn--white{
+  background-color: #FFFFFF;
+  color: #11002A;
+}
+.btn--blueGreen:link,
+.btn--blueGreen:visited {
+  background-color: #54E8E0;
+  color: #11002A;
+}
+
+.btn--blueGreen:hover,
+.btn--blueGreen:active {
+  background-color: #4cd1ca;
+}
+
+.btn--purple:link,
+.btn--purple:visited {
+  background-color: #6200EE;
+  color: #FFFFFF;
+}
+
+.btn--purple:hover,
+.btn--purple:active {
+  background-color: #5800d6;
+}
+
+.btn--white:link,
+.btn--white:visited {
+  background-color: #FFFFFF;
+  color: #11002A;
+}
+
+.btn--white:hover,
+.btn--white:active {
+  background-color: #e6e6e6;
+}
+
+
+
+
+.link:link,
+.link:visited {
+  display: inline-block;
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  line-height: 1.2;
+}
