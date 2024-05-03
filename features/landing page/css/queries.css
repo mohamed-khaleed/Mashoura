@@ -1,0 +1,249 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 84em) {
+  body{
+    background-color: goldenrod;
+  }
+}
+
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+  body{
+    background-color: orangered;
+  }
+  
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+  body{
+    background-color: aquamarine;
+  }
+ 
+  
+}
+
+/**************************/
+/* BELOW 704px (Smaller tablets) */
+/**************************/
+
+/* @media (max-width: 44em) {
+  body{
+    background-color: red;
+  }
+  
+} */
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 34em) {
+  body{
+    background-color: blue;
+  }
+  .hero-title{
+    font-size: 4.5rem;
+    line-height: 6rem;
+  }
+  .hero-mashoura-logo{
+    position: absolute;
+    top: 25%;
+    left: 2.625rem;
+    height: 35rem;
+  }
+   /**************************/
+    /* circle section */
+   /**************************/
+  .circle-section{
+    flex-direction: column;
+    gap: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  .circle-section-text-content{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+   
+    width: 100%;
+  }
+  .circle-section-title{
+    font-size: 3rem;
+    line-height: 3.5rem;
+    
+  }
+  .circle-section-paragraph{
+    font-size: 1rem;
+    line-height: 2.5rem;
+   
+  }
+  .circle-section-chart{
+    width: 100%;
+  }
+  .circle-section-chart img{
+    width: 100%;
+  }
+   /**************************/
+    /* key-features-section */
+   /**************************/
+   .key-features-section{
+    gap: 5rem;
+    padding-top: 5rem ;
+    padding-bottom: 5rem ;
+   }
+   .features-container{
+    flex-direction: column;
+    gap: 3rem;
+   }
+   .feature-item{
+     width: 60%;
+    height: 70%;
+  }
+  .features-section-header{
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  .features-section-header p{
+    font-size: 1.2rem;
+    line-height: 2rem;
+    width: 100%;
+  }
+  .features-section-header h2{
+    font-size: 3rem;
+    line-height: 4rem;
+    width: 100%;
+  }
+  /**************************/
+     /* questions section */
+  /**************************/
+  .questions-section h2 {
+    font-size: 3.5rem;
+    line-height: 5rem;
+    margin-bottom: 5rem;
+  }
+  .rating-text-container,.rating-chart-container,.stars-text-container,.chart-text-container,.stars-chart-container,.chart-container,.stars-container,.rating-container{
+    width: 100%;
+  }
+  .rating-container,.stars-container,.chart-container,.stars-container{
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+  }
+  .rating-text-container,.stars-text-container,.chart-text-container{
+    justify-content: center;
+    align-items: center;
+  }
+  .rating-chart-container img{
+    width: 80%;
+  }
+  .stars-container{
+    flex-direction: column-reverse;
+  }
+  
+  .chart-img-container img{
+    width: 70%;
+    height: 80%;
+  }
+  .chart-img-container{
+    margin: auto;
+   
+    width: 40rem;
+  }
+  .questions-section h3{
+    font-size: 3rem;
+  }
+   /**************************/
+     /* survey-section*/
+  /**************************/
+  .survey-section{
+    flex-direction: column-reverse;
+   }
+   .survey-text-container,.survey-section img{
+      width: 100%;
+   }
+    .survey-text-container{
+      align-items: center;
+      gap: 3rem;
+      padding: 5rem;
+    }
+    .survey-text-container h2,.survey-text-container p{
+      text-align: center;
+    }
+    .green-box,.yellow-box,.purple-box{
+    
+     display: none;
+    }
+       /**************************/
+     /* analytics-section*/
+  /**************************/
+    .analytics-section{
+      overflow: hidden;
+    }
+    .companies-item {
+      text-align: center;
+     
+    }
+    .companies-item img{
+      width: 70%;
+    }
+    .analytics-text-container h2 {
+      font-size: 4rem;
+      line-height: 6rem;
+    }
+    .analytics-text-container p{
+      font-size: 1.2rem;
+      line-height: 2.5rem;
+    }
+    /**************************/
+     /*contact-us-section */
+  /**************************/
+  .contact-us-section{
+    flex-direction: column;
+    gap: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  .contact-us-section main , .contact-us-section header{
+    width: 100%;
+  }
+  .contact-us-section header{
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .contact-us-section header{
+    text-align: center;
+  }
+
+      /**************************/
+     /*footer */
+  /**************************/
+  footer{
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem;
+
+  }
+}
+
+
+

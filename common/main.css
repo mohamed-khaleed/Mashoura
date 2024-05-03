@@ -24,14 +24,9 @@ body{
   font-size: 1rem;
   font-weight: 600;
   border-radius: 0.5rem;
- 
-  /* Only necessary for .btn */
   border: none;
   cursor: pointer;
   font-family: inherit;
-
-  /* Put transition on original "state" */
-  /* transition: background-color 0.3s; */
   transition: all 0.3s;
 }
 
@@ -159,4 +154,214 @@ input:checked + .slider {
 
 input:checked + .slider:before {
   transform: translateX(1.357rem);
+}
+
+li{
+  list-style: none;
+}
+
+.bg-purple{
+  background-color: #6200EE;
+}
+.bg-yellow{
+  background-color: #FFD60A;
+}
+.bg-blueGreen{
+  background-color: #54E8E0;
+}
+/**************************/
+/* FOOTER */
+/**************************/
+footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.social-media-item{
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  background-color: #F3EBFE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-media-logos{
+  display: flex;
+  gap: 1rem;
+
+}
+
+/**************************/
+/* HEADER */
+/**************************/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+
+  /* Because we want header to be sticky later */
+  height: 5.5rem;
+  padding: 3rem 8.25rem;
+  position: fixed;
+ z-index: 2;
+ left: 0;
+ right: 0;
+}
+
+.logo {
+  height: 3.063rem;
+  width: 10.75rem;
+}
+
+/**************************/
+
+/**************************/
+/* NAVIGATION */
+/**************************/
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size:1rem;
+  font-weight: 500;
+  height: 1.375rem;
+  line-height: 1.35rem;
+  transition: all 0.3s;
+  text-transform: capitalize;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #54E8E0;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1rem 2rem;
+  width: 9.35rem;
+  height: 3.5rem;
+  border-radius: 8px;
+  color: #11002A !important;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  margin-left: 0.625rem;
+  background-color: #54E8E0;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #4cd1ca;
+}
+.arrow-down{
+  margin-right: 8px;
+}
+
+.navbar-menu{
+  width: 32rem;
+  height: 14rem;
+  background-color: #F3EBFE;
+  padding: 2.5rem 0px 2.5rem 2rem;
+  display: flex;
+  position: absolute;
+  top: 100%;
+ display: none;
+  
+}
+.navbar-menu li{
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  text-transform: capitalize;
+}
+.navbar-menu li:hover{
+  color:#6100DD;
+}
+.navbar-menu-list li:hover + .imgs-container{
+  background-color:#6100DD;
+}
+
+
+.navbar-menu-list , .imgs-container{
+  width: 50%;
+}
+.avatar-1 , .avatar-2 {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  
+}
+.avatar-2{
+  margin-top: 30%;
+}
+.avatar-1{
+  margin-top: 20%;
+}
+.avatar-3{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+.imgs-container{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 10px;
+}
+.feature-li{
+  position: relative;
+ 
+}
+.feature-li:hover .navbar-menu{
+  display: flex;
+
+}
+
+
+/* MOBILE */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+/* STICKY NAVIGATION */
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+.sticky .section-hero {
+  margin-top: 9.6rem;
 }
