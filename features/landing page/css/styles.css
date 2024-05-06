@@ -124,6 +124,41 @@
   top: 35%;
   right: 10%;
 }
+
+/*****animation***/
+.h1-animation {
+  color: #54E8E0 ;
+  display: inline-block;
+  height: 8.5rem;
+  position: relative;
+  top: 48px;
+  overflow: hidden;
+}
+
+.h1-animation > div > div {
+  margin-bottom: 2.81rem;
+  display:inline-block;
+}
+
+.h1-animation div:first-child {
+  animation: text-animation 8s infinite;
+}
+
+
+
+@keyframes text-animation {
+  0% {margin-top: 0;}
+  10% {margin-top: 0;}
+  20% {margin-top: -12rem;}
+  30% {margin-top: -11rem;}
+  40% {margin-top: -22.24rem;}
+  60% {margin-top: -22.24rem;}
+  70% {margin-top: -12rem;}
+  80% {margin-top: -11rem;}
+  90% {margin-top: 0;}
+  100% {margin-top: 0;}
+}
+
 /**************************/
 /* CIRCLE SECTION */
 /**************************/
@@ -132,8 +167,8 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  
-  
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 .circle-chart{
   width: 100%;
@@ -148,7 +183,6 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
- 
 }
 .circle-section-text-content span , .survey-text-container span , .analytics-text-container span{
   color: #6100DD;
@@ -167,18 +201,55 @@
 .circle-img-container{
   overflow: hidden;
   position: relative;
-  width: 43.75rem;
+  width: 40rem;
+ 
+  margin: auto;
+}
+.circle-section-chart > div{
+  position: relative;
+}
+.circle-overlay-box{
+  position: absolute;
+  top: 10%;
+  left: -10%;
+  background-color: #FFFFFF;
 }
 .circle-img{
-  height: 31rem;
+  height: 28rem;
   position: absolute;
   top: 5%;
   right:-100%;
   transform: rotate(180deg);
   transform: scale(0.2);
-
-  animation: moving-forward 4s ease-in-out infinite alternate;
-   
+  
+}
+.moving-circle-forward{
+  animation: moving-forward 3s ease forwards;
+}
+.moving-circle-backward{
+  animation: moving-backward 3s ease forwards;
+}
+.moving-box-forward{
+  animation: moving-boxes-forward 3s ease forwards;
+}
+.moving-box-backward{
+  animation: moving-boxes-backward 3s ease forwards;
+}
+.circle-box-1{
+  background-color: white;
+  position: absolute;
+  bottom: 40%;
+  left: 15%;
+  transform: translateX(-200%);
+  transition: all 2s;
+}
+.circle-box-2{
+  background-color: white;
+  position: absolute;
+  left: 10%;
+  bottom:10%;
+  transition: all 2s;
+  transform: translateX(-200%);
 }
 /**************************/
 /* KEY FEATURES */
@@ -331,6 +402,281 @@
   height:20rem;
 }
 
+/**************************/
+.progress-bar-container {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33rem;
+  height: 9rem;
+  border-radius: 1.5rem;
+  background-color: #FBFBFB;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar {
+  width: 28rem;
+  height: 3rem;
+  background-color: #d9d9d9;
+  border-radius: 4px;
+  overflow: hidden; /* Hide overflow for gradient overlay */
+  position: relative;
+}
+
+.progress-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  
+  background: linear-gradient(to right, 
+      #4CAF50 0%, 
+      #4CAF50 33.33%, 
+      #FFC107 33.33%, 
+      #FFC107 66.66%, 
+      #F44336 66.66%, 
+      #F44336 100%);
+  border-radius: 4px;
+  transition: width 3s ease; /* Smooth transition for width change */
+}
+.progress-bar-container > img:nth-child(4){
+ opacity: 0;
+  position: absolute;
+  width:70px ;
+  height:70px;
+  left: 45%;
+  bottom: 3%;
+  transition: opacity 2s;
+}
+.progress-bar-container > img:nth-child(2){
+  opacity: 0;
+  position: absolute;
+  width:70px ;
+  height:70px;
+  left: 15%;
+   bottom: 3%;
+   transition: opacity 2s;
+}
+.progress-bar-container > img:nth-child(3){
+  opacity: 0;
+  position: absolute;
+  width:70px ;
+  height:70px;
+  right: 15%;
+  bottom: 3%;
+  transition: opacity 2s;
+}
+/**************************/
+
+.stars-chart-box{
+  width:45rem ;
+  background-color: #FBFBFB;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 1rem;
+}
+.star-bar{
+  width:30rem ;
+  background-color: #F4F4F4;
+  height: 15px;
+  border-radius: 4px;
+ 
+}
+.star-percentage {
+  background-color: #6200EE;
+  height:15px ;
+  border-radius: 4px;
+  position: relative;
+  transition: width 3s ease;
+}
+.start-chart-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.star::after{
+  content: "★★★";
+  color: #FFC107;
+  position: absolute;
+  font-size: 48.93px;
+  letter-spacing: -22px;
+  top: -200%;
+  right: -13%;
+}
+.hidden-after::after {
+  display: none;
+}
+
+/**************************/
+
+.avatars-chart-box{
+  width: 50rem;
+  background-color: #FBFBFB;
+  padding: 1rem;
+  display: flex;
+  gap: 2rem;
+  border-radius: 4px;
+}
+.percentage-part{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.percentage-part p{
+  font-size: 11.29px;
+  text-align: Right;
+  color: #615E83;
+}
+
+.avatar-bar{
+  width: 29.47px;
+  height: 310px;
+  border-radius: 2.12px;
+  background-color: #F2F4F7;
+  transform: rotate(180deg);
+}
+.avatar-bar-percentage{
+  
+  width: 29.47px;
+  border-radius: 2.12px;
+  position: relative;
+  transition: all 3s;
+  
+}
+.progress-bars-part,.bars-text-part{
+  display: flex;
+  gap: 4rem;
+}
+.bars-text-part{
+   gap: 3.5rem;
+   margin-top: 20px;
+  }
+.bars-text-part p{
+  font-size: 9.88px;
+  color: #615E83;
+  text-align: center;
+}
+.avatar-bar-percentage::after{
+  content: url(../../../images/purple-avatar.svg);
+  width: 2.3rem;
+  height: 2.3rem;
+  transform: rotate(180deg);
+  position: absolute;
+  top: 103%;
+}
+.progress-bars-part > div:nth-child(1) .avatar-bar-percentage {
+  background-color: #759BE4;
+  
+}
+.progress-bars-part > div:nth-child(2) .avatar-bar-percentage {
+  background-color: #6200EE;
+}
+.progress-bars-part > div:nth-child(3) .avatar-bar-percentage {
+  background-color: #85CF88;
+}
+.progress-bars-part > div:nth-child(4) .avatar-bar-percentage {
+  background-color:#F7A66B ;
+}
+.progress-bars-part > div:nth-child(5) .avatar-bar-percentage {
+  background-color:#CEB0FA ;
+}
+.progress-bars-part > div:nth-child(6) .avatar-bar-percentage {
+  background-color:#6200EE ;
+}
+.progress-bars-part > div:nth-child(7) .avatar-bar-percentage {
+  background-color: #CEB0FA;
+}
+.progress-bars-part > div:nth-child(8) .avatar-bar-percentage {
+  background-color:#6CAEAE ;
+}
+
+.progress-bars-part > div:nth-child(1) .avatar-bar-percentage::after {
+  content: url(../../../images/blue-avatar.svg);
+}
+.progress-bars-part > div:nth-child(2) .avatar-bar-percentage::after {
+  content: url(../../../images/purple-avatar.svg);
+}
+.progress-bars-part > div:nth-child(3) .avatar-bar-percentage::after {
+  content: url(../../../images/green-avatar.svg);
+}
+.progress-bars-part > div:nth-child(4) .avatar-bar-percentage::after {
+  content: url(../../../images/orange-avatar.svg);
+}
+.progress-bars-part > div:nth-child(5) .avatar-bar-percentage::after {
+  content: url(../../../images/light-purple-avatar.svg);
+}
+.progress-bars-part > div:nth-child(6) .avatar-bar-percentage::after {
+  content: url(../../../images/purple-avatar-2.svg);
+}
+.progress-bars-part > div:nth-child(7) .avatar-bar-percentage::after {
+  content: url(../../../images/light-purple-avatar-2.svg);
+}
+.progress-bars-part > div:nth-child(8) .avatar-bar-percentage::after {
+  content: url(../../../images/dark-green-avatar.svg);
+} 
+/**************************/
+
+
+
+/**************************/
+
+.chart-img-container > div img:first-child{
+  opacity: 0.2;
+  width: 250px;
+  height: 250px;
+ transition: all 2s;
+}
+.chart-img-container > div{
+  position: relative;
+}
+.chart-img-container > div img:nth-child(2){
+  position: absolute;
+  width: 42.69px;
+  height: 42.69px;
+  bottom:20%;
+  left: 30%;
+  transition: all 2s;
+}
+
+.chart-img-container > div img:nth-child(3){
+  position: absolute;
+  width: 52.69px;
+  height: 52.69px;
+  top: 8%;
+  right: 1%;
+  transition: all 2s;
+}
+
+.chart-img-container > div img:nth-child(4){
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  top: 35%;
+  left: 0;
+  transition: all 2s;
+}
+
+.chart-img-container > div img:nth-child(5){
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  top: 35%;
+  right: 25%;
+  transition: all 2s;
+}
+.chart-img-container > div img:nth-child(6){
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 20%;
+  left: 25%;
+  transition: all 2s;
+}
 /**************************/
 /* questions bank section */
 /**************************/
@@ -594,10 +940,10 @@ select,.survey-language-form input{
   gap: 2rem;
 }
 .companies-first-row{
-  animation: infinite-scrolling-left 10s linear infinite;
+  animation: infinite-scrolling-left 20s linear infinite;
 }
 .companies-second-row{
-  animation: infinite-scrolling-right 10s linear infinite;
+  animation: infinite-scrolling-right 20s linear infinite;
 }
 .companies-logo-container {
   overflow: hidden;
@@ -608,9 +954,12 @@ select,.survey-language-form input{
 /* contact-us-section */
 /**************************/
 .contact-us-section{
-
- background-color:#11002A;
+  padding-top:5rem ;
+  padding-bottom: 5rem;
+  background-color:#11002A;
   display: flex;
+  overflow: hidden;
+  position: relative;
 }
 .email-form-container{
  width: 45rem;
@@ -621,6 +970,8 @@ select,.survey-language-form input{
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  z-index: 2;
+  transition: all 3s ;
 }
 .email-form-container input{
   width :39rem;
@@ -642,6 +993,7 @@ select,.survey-language-form input{
 .contact-us-section header{
   flex-direction: column;
   gap: 3rem;
+  z-index: 2;
 }
 .email-form-container button{
   font-family: "Poppins", sans-serif;
@@ -675,3 +1027,30 @@ select,.survey-language-form input{
 color: #00DDD0;
 }
 
+.contact-us-logo{
+  position: absolute;
+  bottom: 0;
+  right: 25%;
+   width: 50rem;
+   height: 30rem;
+  transform: scale(3);
+}
+
+.animate-emailBox-forward{
+  animation: moving-emailBox-forward 3s ease forwards;
+}
+.animate-emailBox-backward{
+  animation: moving-emailBox-backward 3s ease forwards;
+}
+.animate-contactHeader-forward{
+  animation: moving-contactHeader-forward 3s ease forwards;
+}
+.animate-contactHeader-backward{
+  animation: moving-contactHeader-backward 3s ease forwards;
+}
+.animate-logo-down{
+  animation: scaleDown 3s ease forwards;
+}
+.animate-logo-up{
+  animation: scaleUp 3s ease forwards;
+}
