@@ -161,5 +161,38 @@ document.addEventListener("DOMContentLoaded", function () {
         }
   });
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////slider/////
+      const questionBankNextBtn = document.getElementById("bankNextBtn");
+      const questionBankPrevBtn = document.getElementById("bankPreviousBtn");
+      const questionBankForms = document.querySelectorAll(".QuestionsBank-item");
+      const questionBankHeadings = document.querySelectorAll(".questions-bank-header h2");
+       
+      let currentQuestionBankSlide = 0;
+       questionBankForms.forEach((form, index) => {
+        form.style.transform = `translateX(${index * 120}%)`;
+       });
+       
+       function slideQuestions(direction) {
+        const maxSlideIndex = questionBankForms.length - 1;
+      
+        if (direction === 'next' && currentQuestionBankSlide < maxSlideIndex) {
+         currentQuestionBankSlide++;
+        } else if (direction === 'previous' &&currentQuestionBankSlide > 0) {
+         currentQuestionBankSlide--;
+        } else {
+          return;
+        }
+      
+        questionBankForms.forEach((question, index) => {
+          question.style.transform = `translateX(${(index -currentQuestionBankSlide) * 120}%)`;
+        });
+      }
 
+      questionBankNextBtn.addEventListener("click", function () {
+        slideQuestions('next');
+      });
+      questionBankPrevBtn.addEventListener("click", function () {
+        slideQuestions('previous');
+      });
 });

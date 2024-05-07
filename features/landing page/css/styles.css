@@ -144,8 +144,6 @@
   animation: text-animation 8s infinite;
 }
 
-
-
 @keyframes text-animation {
   0% {margin-top: 0;}
   10% {margin-top: 0;}
@@ -169,6 +167,7 @@
   gap: 2rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
+ 
 }
 .circle-chart{
   width: 100%;
@@ -256,29 +255,27 @@
 /**************************/
 
 .key-features-section{
-  background-image: url(../../../images/section-cover.svg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  
+  background-color: #11002A;
   display: flex;
   justify-content: center;
-
   gap: 2rem;
   flex-direction: column;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  position: relative;
+  overflow: hidden;
 }
 .feature-item{
   width: 20rem;
-  height: 22rem;
-  background-color: #9191911A;
+ display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  background: #9191911A;
   border-radius: 1rem;
   overflow: hidden;
 }
-.feature-item img{
- margin-left: 10px;
 
-
-}
 .feature-item p{
   font-size: 2rem;
   color: white;
@@ -291,14 +288,14 @@
   align-items: center;
   gap: 2rem;
   height: 100%;
+  z-index: 2;
 }
 .features-section-header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
   margin-top:20px ;
-  
+  z-index: 2;
 }
 .features-section-header h2{
   font-size: 3.5rem;
@@ -316,6 +313,37 @@
 }
 .circls{
   height: 15rem;
+}
+.features-container > .feature-item:nth-child(1) img{
+  height: 200px;
+  object-fit: cover;
+}
+.features-container > .feature-item:nth-child(2) img{
+
+  width: 250px;
+  height: 200px;
+  margin: auto;
+}
+.features-container > .feature-item:nth-child(3) img{
+  
+  width: 250px;
+  height: 200px;
+  margin: auto;
+}
+.features-container > .feature-item:nth-child(4) img{
+
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+.key-features-vector{
+  position: absolute;
+  width: 30rem;
+  height:30rem ;
+  bottom: -45%;
+  right: -10%;
+  width: 50rem;
+  height: 50rem;
 }
 
 /**************************/
@@ -442,7 +470,7 @@
   border-radius: 4px;
   transition: width 3s ease; /* Smooth transition for width change */
 }
-.progress-bar-container > img:nth-child(4){
+ .progress-bar-container > img:nth-child(4){
  opacity: 0;
   position: absolute;
   width:70px ;
@@ -682,6 +710,11 @@
 /**************************/
 .questions-bank-section{
   background: linear-gradient(to bottom left, #6100DD 0%,  #00DDD0 100%);
+  display: flex;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  position: relative;
+  overflow: hidden;
 }
 .questions-bank-form{
   background-color: #FFFFFF;
@@ -689,6 +722,9 @@
   padding: 1.875rem;
   border-radius: 1.391rem;
   display: flex;
+  position: absolute;
+  right: 0;
+  
 }
 .question-bank-part,.preview-part{
   display: flex;
@@ -705,7 +741,6 @@
   padding: 1.391rem;
   border-radius: 0.928rem;
   border: 0.058rem solid #F2F4F7;
-  
   width: 25rem;
   text-align: end;
 }
@@ -761,8 +796,8 @@ select,.survey-language-form input{
   justify-content: space-between;
   gap: 2rem;
   width: 100%;
-  height: 400px;
   overflow-y: auto;
+  
 }
 .preview-container{
   display: flex;
@@ -794,8 +829,8 @@ select,.survey-language-form input{
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  
-
+  position: absolute;
+  right: 10%;
 }
 .survey-language-form header{
   display: flex;
@@ -838,7 +873,43 @@ select,.survey-language-form input{
   text-transform: capitalize;
   align-self: flex-end;
 }
-
+.questions-bank-header{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
+  gap: 2rem;
+ 
+}
+.question-bank-carousel{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.questions-bank-header h2{
+  width: 50%;
+  font-size: 6rem;
+  line-height: 6rem;
+  font-weight: 900;
+  color: #FFFFFF;
+  text-transform: capitalize;
+}
+.questions-bank-header p{
+  font-size: 1.5rem;
+  line-height: 2rem;
+  width: 80%;
+  color: #FFFFFF;
+}
+.question-bank-vector{
+  position: absolute;
+  top: 15%;
+  right: 3%;
+  width: 60%;
+  color: #FFFFFF !important;
+}
 /**************************/
 /* survey section */
 /**************************/

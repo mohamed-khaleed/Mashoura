@@ -169,6 +169,19 @@ li{
 .bg-blueGreen{
   background-color: #54E8E0;
 }
+
+.slider-buttons{
+  display: flex;
+  gap: 1rem;
+}
+.slider-button-item{
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  border: 1px solid #11002A;
+  padding: 26px;
+  background-color: #FFFFFF;
+}
 /**************************/
 /* FOOTER */
 /**************************/
@@ -176,7 +189,8 @@ footer{
   display: flex;
   justify-content: space-around;
   align-items: center;
-
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .social-media-item{
   width: 2rem;

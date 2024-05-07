@@ -1,0 +1,205 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 84em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 76.25%;
+  }
+  body {
+   
+  }
+ 
+}
+
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+@media (max-width: 75em) {
+  body {
+    
+  }
+}
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+  body {
+
+  }
+ 
+}
+
+/**************************/
+/* BELOW 704px (Smaller tablets) */
+/**************************/
+
+/* @media (max-width: 44em) {
+  body{
+    background-color: red;
+  }
+  
+} */
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 34em) {
+  h2{
+    font-size: 3rem ;
+    line-height: 4rem;
+    width: 100%;
+    text-align: center;
+  }
+  body {
+    
+  }
+  .hero-section{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+  }
+   .hero-text-content,.hero-charts-imgs{
+    width: 100%;
+    z-index: 2;
+   } 
+    .hero-text-content{
+    text-align: center;
+   }
+
+  .chart1{
+    width: 15.25rem;
+    right:-5% ;
+  }
+  .chart2{
+    width: 20rem;
+    top: 12%;
+    left: -8%;
+  }
+  .chart3{
+    width: 45.25rem;
+  }
+  .chart4{
+    width: 25.25rem;
+    bottom: -10%;
+    left:-5%;
+  }
+  .chart5{
+    width: 15.25rem;
+    bottom: -5%;
+    right:-10%;
+   
+  }
+   /**************************/
+    /*questions-slider-section*/
+   /**************************/
+.question-slider-text,.question-slider-image{
+    width: 100%;
+   }
+   .questions-slider-section header {
+       text-align: center;
+   }
+   .questions-slider-container{
+    width: 100%;
+   }
+   .question-slider-item{
+    flex-direction: column;
+    gap: 3rem;
+    width: 50rem;
+    height: 575px;
+    border-radius:15px ;
+    margin: auto;
+    padding: 3rem;
+   }
+   .question-slider-text {
+   
+    text-align: center;
+   }
+   .question-slider-image{
+   align-items: center;
+   justify-content: center;
+   }
+   .question-slider-text img {
+    margin: auto;
+   }
+   .nav-icon-container{
+    border-radius: 5.25px;
+    padding: 0px;
+
+  }
+  .nav-icon-container svg{
+    width: 10px;
+    margin-left: 4px;
+  }
+ 
+   /**************************/
+/* surveys-advantages-section */
+/**************************/
+
+.surveys-advantage-item{
+  width: 100%;
+}
+.surveys-advantage-img-container,.surveys-advantage-text-container{
+  height: 50%;
+}
+.second-section-second-img{
+  width:408.9px;
+  height: 319px;
+}
+.second-section-third-img{
+  width: 602px;
+  height: 344px;
+}
+.second-section-fourth-img{
+  width: 700px;
+  height: 340px;
+}
+/**************************/
+/* decisions-section */
+/**************************/
+
+
+.spans-item{
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+.first-row,.second-row{
+ flex-wrap: wrap;
+}
+.responsive-form{
+  width: 40%;
+  overflow: hidden;
+  margin: auto;
+}
+.first-form{
+  height: 25.625rem;
+}
+.second-form,.third-form{
+  height: 28rem;
+}
+.fourth-form{
+  height: 15rem;
+}
+.fifth-form{
+  height: 12rem;
+}
+.sixth-form,.eight-form,.seventh-form{
+  height: 20rem;
+}
+.upload-img-box-container{
+  width:136.96px ;
+}
+
+
+
+}

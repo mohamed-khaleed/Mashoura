@@ -75,9 +75,23 @@
       <img src="../../images/first-line-hero.svg" class="hero-first-line" alt="hero-first-line" >
       <img src="../../images/second-line-hero.svg" class="hero-second-line" alt="hero-second-line" >
     </section>
-    <section class="questions-slider-section">
+    <section class="questions-slider-section container">
       <header>
         <h2>Questions That Make Decisions Driven by Data!</h2>
+        <div class="slider-buttons">
+          <div id="questionsPreviousBtn" class="slider-button-item ">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.05 4.07992L8.53 10.5999C7.76 11.3699 7.76 12.6299 8.53 13.3999L15.05 19.9199" stroke="#11002A" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              
+           </div>
+           <div id="questionsNextBtn" class="slider-button-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.95 4.07992L15.47 10.5999C16.24 11.3699 16.24 12.6299 15.47 13.3999L8.95 19.9199" stroke="#11002A" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+           </div>
+      
+        </div>
       </header>
       <main class="questions-slider-container">
          <div class="question-slider-item">
@@ -551,7 +565,7 @@
          </div>
          <div class="decisions-form-container">
           <div class="first-row">
-            <div class="first-form">
+            <div class="first-form responsive-form">
               <header>
                 <div class="second-form-header-inner">
                   <h4>1.Enter Question Title</h4>
@@ -571,7 +585,7 @@
                </main>
                <button class="outline-purple-btn"> <img src="../../images/purple-plus-icon.svg" alt="purple-plus-icon"> Add another one</button>
             </div>
-            <div class="second-form ">
+            <div class="second-form responsive-form">
              <header>
               <div class="second-form-header-inner">
                 <h4>1.Enter Question Title</h4>
@@ -597,7 +611,7 @@
              </main>
              <button class="outline-purple-btn"> <img src="../../images/purple-plus-icon.svg" alt="purple-plus-icon"> Add another one</button>
             </div>
-            <div class="third-form">
+            <div class="third-form responsive-form">
              <header>
               <div class="second-form-header-inner">
                 <h4>2.What is your gender ?</h4>
@@ -625,7 +639,7 @@
                 </div>
              </main>
             </div>
-            <div class="fourth-form">
+            <div class="fourth-form responsive-form">
              <h4>1 . Upload your photo</h4>
              <div class="upload-img-box-container">
                <img src="../../images/gallery-add.svg" alt="gallery-add">
@@ -635,14 +649,14 @@
             </div>
           </div>
           <div class="second-row">
-            <div class="fifth-form">
+            <div class="fifth-form responsive-form">
               <header>
                 <h4>1.Enter Question Title</h4>
                 <p>Description (optional) </p>
               </header>
               <input type="text" placeholder="type your answer...">
             </div>
-            <div class="sixth-form">
+            <div class="sixth-form responsive-form">
               <header>
                <div class="second-form-header-inner">
                  <h4>1 . How likely is it that you would recommend to a friend or colleague?</h4>
@@ -687,7 +701,7 @@
                  <p>Extremely likely</p>
               </div>
             </div>
-            <div class="seventh-form">
+            <div class="seventh-form responsive-form">
                <header>
                  <div class="second-form-header-inner">
                    <h4>1 . What is your Birthdate ?</h4>
@@ -707,7 +721,7 @@
                  </div> 
                </main>
             </div>
-            <div class="eight-form">
+            <div class="eight-form responsive-form">
                <header>
                  <div class="second-form-header-inner">
                    <h4>1 . How likely is it that you would recommend to a friend or colleague?</h4>
@@ -742,6 +756,20 @@
        <header>
           <h2>Insightful Surveys: Your Path to Understanding
           </h2>
+          <div class="slider-buttons">
+            <div id="surveyPreviousBtn" class="slider-button-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.05 4.07992L8.53 10.5999C7.76 11.3699 7.76 12.6299 8.53 13.3999L15.05 19.9199" stroke="#11002A" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                
+             </div>
+             <div id="surveyNextBtn" class="slider-button-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.95 4.07992L15.47 10.5999C16.24 11.3699 16.24 12.6299 15.47 13.3999L8.95 19.9199" stroke="#11002A" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+             </div>
+        
+          </div>
        </header>
        <main >
           <div class="servey-item">
@@ -753,14 +781,36 @@
             <img src="../../images/green-balls-icon.svg" alt="green balls icon">
             <h4>Customization & Theming</h4>
             <p>How likely is it that you would Recommend to a friend or colleague?</p>
-         </div>
-         <div class="servey-item">
+          </div>
+          <div class="servey-item">
           <img src="../../images/green-balls-icon.svg" alt="green balls icon">
           <h4>Customization & Theming</h4>
           <p>How likely is it that you would Recommend to a friend or colleague?</p>
-       </div>
+          </div>
+          <div class="servey-item">
+            <img src="../../images/green-balls-icon.svg" alt="green balls icon">
+            <h4>Customization & Theming</h4>
+            <p>How likely is it that you would Recommend to a friend or colleague?</p>
+          </div>
+          <div class="servey-item">
+            <img src="../../images/green-balls-icon.svg" alt="green balls icon">
+            <h4>Customization & Theming</h4>
+            <p>How likely is it that you would Recommend to a friend or colleague?</p>
+          </div>
+          <div class="servey-item">
+            <img src="../../images/green-balls-icon.svg" alt="green balls icon">
+            <h4>Customization & Theming</h4>
+            <p>How likely is it that you would Recommend to a friend or colleague?</p>
+          </div>
+          <div class="servey-item">
+            <img src="../../images/green-balls-icon.svg" alt="green balls icon">
+            <h4>Customization & Theming</h4>
+            <p>How likely is it that you would Recommend to a friend or colleague?</p>
+          </div>
        </main>
     </section>
   </main>
+
+  <script src="controllers/script.js"></script>
 </body>
 </html>
