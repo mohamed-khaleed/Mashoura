@@ -22,10 +22,8 @@
 /**************************/
 /* BELOW 1200px (Landscape Tablets) */
 /**************************/
-@media (max-width: 75em) {
-  body {
-    background-color: orangered;
-  }
+@media (max-width: 59em) {
+ 
 }
 /**************************/
 /* BELOW 944px (Tablets) */
@@ -36,9 +34,7 @@
     /* 9px / 16px  */
     font-size: 56.25%;
   }
-  body {
-    background-color: aquamarine;
-  }
+ 
   .hero-title {
     font-size: 7.5rem;
     line-height: 8rem;
@@ -85,6 +81,9 @@
         margin-top: 0;
       }
     }
+    .h1-span{
+      animation: none;
+    }
  
   /**************************/
   /* circle section */
@@ -113,6 +112,20 @@
   .circle-section-chart img {
     width: 100%;
   }
+  .circle-overlay-box img ,.circle-box-1 img ,.circle-box-2 img{
+    width: 3rem;
+    height: 3rem;
+
+  }
+  .circle-box-1{
+    bottom: 40%;
+    left: 2%;
+  }
+  .circle-box-2{
+    left: 5%;
+    bottom:10%;
+  }
+  
   /**************************/
   /* key-features-section */
   /**************************/
@@ -249,11 +262,35 @@
   /**************************/
   /* question bank*/
   /**************************/
-
+  /* .questions-bank-header h2{
+   
+    font-size: 5.5rem;
+  
+  }
+  .slider-headers{
+  position: relative;
+  height: 300px;
+;
+}
+.survey-language-form{
+   height: 450px;
+} */
   /**************************/
   /* survey-section*/
   /**************************/
-
+  .survey-text-container{
+padding: 1rem;
+  }
+  .survey-text-container h2{
+    font-size: 3.8rem;
+    line-height: 5rem;
+   
+  }
+  .survey-text-container p{
+    font-size: 1rem;
+    line-height: 2rem;
+  
+  }
   /**************************/
   /* analytics-section*/
   /**************************/
@@ -274,21 +311,8 @@
     font-size: 1.2rem;
     line-height: 2.5rem;
   }
-  /**************************/
-  /*contact-us-section */
-  /**************************/
-  .contact-us-section {
-    gap: 5rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-  .contact-us-section main,
-  .contact-us-section header {
-    width: 100%;
-  }
-  .contact-us-section header {
-    gap: 3rem;
-  }
+
+  
 }
 
 /**************************/
@@ -307,12 +331,14 @@
 /**************************/
 
 @media (max-width: 34em) {
-  body {
-    background-color: blue;
-  }
+ 
   .hero-title {
     font-size: 4.5rem;
     line-height: 6rem;
+  }
+  .blueGreen-bg{
+    
+    left: 30%;
   }
   .hero-mashoura-logo {
     position: absolute;
@@ -340,22 +366,22 @@
       margin-top: 0;
     }
     20% {
-      margin-top: -9rem;
+      margin-top: -12rem;
     }
     30% {
-      margin-top: -9rem;
+      margin-top: -12rem;
     }
     40% {
-      margin-top: -18rem;
+      margin-top: -22rem;
     }
     60% {
-      margin-top: -18rem;
+      margin-top: -22rem;
     }
     70% {
-      margin-top: -9rem;
+      margin-top: -12rem;
     }
     80% {
-      margin-top: -9rem;
+      margin-top: -12rem;
     }
     90% {
       margin-top: 0;
@@ -364,6 +390,7 @@
       margin-top: 0;
     }
   }
+  
 
   /**************************/
   /* circle section */
@@ -565,23 +592,33 @@
   .questions-bank-section {
     flex-direction: column;
     gap: 4rem;
+    height: 1000px;
   }
   .questions-bank-header h2 {
-    font-size: 5rem;
-    line-height: 5rem;
+    font-size: 3rem;
+    top: 3%;
   }
   .questions-bank-header {
     text-align: center;
   }
   .questions-bank-header p {
-    font-size: 1.2rem;
-    line-height: 2rem;
+    position: absolute;
+    top: 12%;
+    font-size: 14px;
+    
   }
+
   .questions-bank-form {
     display: flex;
     width: 40rem !important;
     flex-direction: column;
     gap: 3rem;
+   
+  }
+  .slider-buttons{
+    position: absolute;
+    top: 80%;
+    left: 30%;
   }
   .question-bank-part {
     text-align: center;
@@ -666,33 +703,5 @@
     font-size: 1.2rem;
     line-height: 2.5rem;
   }
-  /**************************/
-  /*contact-us-section */
-  /**************************/
-  .contact-us-section {
-    flex-direction: column;
-    gap: 5rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-  .contact-us-section main,
-  .contact-us-section header {
-    width: 100%;
-  }
-  .contact-us-section header {
-    flex-direction: column;
-    gap: 3rem;
-  }
-  .contact-us-section header {
-    text-align: center;
-  }
-
-  /**************************/
-  /*footer */
-  /**************************/
-  footer {
-    flex-direction: column;
-    gap: 3rem;
-    padding: 3rem;
-  }
+ 
 }

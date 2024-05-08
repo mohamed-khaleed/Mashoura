@@ -200,8 +200,7 @@ h2{
   gap: 2.5rem;
 
 }
-.section-bg{
-  
+.section-bg{ 
   height: 1450px;
   display: flex;
   gap: 5rem;
@@ -210,7 +209,41 @@ h2{
   justify-content: center;
   background: url(../../../images/third-section-bg.svg) no-repeat center center/cover;
   overflow: hidden;
+  position: relative;
 }
+.little-star-one,.little-star-two,.rotated-icon{
+  position: absolute;
+}
+.little-star-one{
+  top:8%;
+  left: 70%;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.little-star-two{
+  bottom:  30%;
+  left: 10%;
+;
+}
+.rotated-icon,.little-star-two
+{
+  width: 1.5rem;
+  height:1.5rem;
+}
+.rotated-icon-one{
+  top: 7%;
+  left: 48%;
+
+}
+.rotated-icon-two{
+ top: 40%;
+  left: 10%
+}
+.rotated-icon-three{
+ right: 10%;
+  top: 30%;
+}
+
 .green-dot{
   width: 0.5rem;
   height: 0.5rem;

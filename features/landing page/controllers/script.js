@@ -1,35 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
   ///////////////////////////////////////////////////////////
-  // Get the progress gradient element
+  
   const progressGradient = document.querySelector(".progress-gradient");
-
-  // Get the progress bar container element
   const progressContainer = document.getElementById("progressContainer");
-
   const emojiImgs = document.querySelectorAll(".progress-bar-container > img");
 
   emojiImgs.forEach((img, index) => {
     img.style.transform = "translateY(100%)";
   });
-  // Function to start the animation
   function startAnimation() {
-    // Reset animation by setting width to 0
     progressGradient.style.width = "0%";
-    // Set width to 100% to trigger animation
     setTimeout(() => {
       progressGradient.style.width = "100%";
-    }, 10); // Delay to ensure width change takes effect
+    }, 10); 
     emojiImgs.forEach((img, index) => {
       setTimeout(() => {
         img.style.opacity = "1";
         img.style.transform = "none";
-      }, 300 * index); // Adjust delay timing (300ms per image)
+      }, 300 * index); 
     });
   }
 
-  // Add click event listener to the progress bar container
   progressContainer.addEventListener("click", function () {
-    startAnimation(); // Call the function to start the animation
+    startAnimation(); 
   });
 
   //////////////////////////////////////////////////////////////////
@@ -69,16 +62,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   pieImg.addEventListener("click", function () {
-    // Show and animate avatar images sequentially
     avatarImages[0].style.opacity = "1";
-
-    // Animate remaining avatar images after a delay
     let delay = 0;
     for (let i = 1; i < avatarImages.length; i++) {
       setTimeout(() => {
         avatarImages[i].style.opacity = "1";
         avatarImages[i].style.transform = "none";
-      }, 300 * i); // Adjust delay timing (300ms per image)
+      }, 300 * i); 
     }
   });
 
@@ -128,71 +118,70 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  ////contact us animation/////
-  const contactUsSection = document.querySelector(".contact-us-section");
-  const contactUsEmailContainer = document.querySelector(".email-form-container");
-  const contactUsHeader = document.querySelector(".contact-us-section header");
-  const mashouraLogo = document.querySelector(".contact-us-logo");
 
-  contactUsSection.addEventListener("click", function () {
-    if (contactUsEmailContainer.classList.contains("animate-emailBox-forward")) {
-      contactUsEmailContainer.classList.remove("animate-emailBox-forward");
-      contactUsEmailContainer.classList.add("animate-emailBox-backward"); 
-    }
-    else {
-      contactUsEmailContainer.classList.add("animate-emailBox-forward");
-      contactUsEmailContainer.classList.remove("animate-emailBox-backward");
-    }
-    if (contactUsHeader.classList.contains("animate-contactHeader-forward")) {
-        contactUsHeader.classList.remove("animate-contactHeader-forward");
-        contactUsHeader.classList.add("animate-contactHeader-backward"); 
-      }
-      else {
-        contactUsHeader.classList.add("animate-contactHeader-forward");
-        contactUsHeader.classList.remove("animate-contactHeader-backward");
-      }
-        if (mashouraLogo.classList.contains("animate-logo-down")) {
-            mashouraLogo.classList.remove("animate-logo-down");
-            mashouraLogo.classList.add("animate-logo-up"); 
-        }
-        else {
-            mashouraLogo.classList.add("animate-logo-down");
-            mashouraLogo.classList.remove("animate-logo-up");
-        }
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  //////slider/////
+  const questionBankNextBtn = document.getElementById("bankNextBtn");
+  const questionBankPrevBtn = document.getElementById("bankPreviousBtn");
+  const questionBankForms = document.querySelectorAll(".QuestionsBank-item");
+  const questionBankHeadings = document.querySelectorAll(
+    ".slider-headers h2"
+  );
+  const slides = document.querySelectorAll(".QuestionsBank-item");
+
+  
+  questionBankForms.forEach((form, index) => {
+    form.style.transform = `translateX(${index * 120}%)`;
+  });
+  questionBankHeadings.forEach((heading, index) => {
+    heading.style.transform = `translateX(${index * -160}%)`;
   });
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////slider/////
-      const questionBankNextBtn = document.getElementById("bankNextBtn");
-      const questionBankPrevBtn = document.getElementById("bankPreviousBtn");
-      const questionBankForms = document.querySelectorAll(".QuestionsBank-item");
-      const questionBankHeadings = document.querySelectorAll(".questions-bank-header h2");
-       
-      let currentQuestionBankSlide = 0;
-       questionBankForms.forEach((form, index) => {
-        form.style.transform = `translateX(${index * 120}%)`;
-       });
-       
-       function slideQuestions(direction) {
-        const maxSlideIndex = questionBankForms.length - 1;
-      
-        if (direction === 'next' && currentQuestionBankSlide < maxSlideIndex) {
-         currentQuestionBankSlide++;
-        } else if (direction === 'previous' &&currentQuestionBankSlide > 0) {
-         currentQuestionBankSlide--;
-        } else {
-          return;
-        }
-      
-        questionBankForms.forEach((question, index) => {
-          question.style.transform = `translateX(${(index -currentQuestionBankSlide) * 120}%)`;
-        });
-      }
+  let currentSlide = 0;
+  let currentQuestionBankHeadingSlide = 0;
+  
+  function showSlideHeading(n) {
+   
+    n = (n + questionBankHeadings.length) % questionBankHeadings.length;
 
-      questionBankNextBtn.addEventListener("click", function () {
-        slideQuestions('next');
-      });
-      questionBankPrevBtn.addEventListener("click", function () {
-        slideQuestions('previous');
-      });
+    questionBankHeadings.forEach(slide => {
+        slide.style.transform = 'translateX(-160%)'; 
+    });
+ 
+    
+    questionBankHeadings[n].style.transform = 'translateX(0)';
+    currentQuestionBankHeadingSlide = n;
+   }
+
+  function showSlide(n) {
+   n = (n + slides.length) % slides.length;
+   slides.forEach(slide => {
+       slide.style.transform = 'translateX(120%)'; 
+   });
+
+   slides[n].style.transform = 'translateX(0)';
+   currentSlide = n;
+  }
+
+  function prevSlide() {
+    showSlide(currentSlide - 1);
+    showSlideHeading(currentQuestionBankHeadingSlide - 1);
+  }
+
+  function nextSlide() {
+    showSlide(currentSlide + 1);
+    showSlideHeading(currentQuestionBankHeadingSlide + 1);
+  }
+
+  showSlide(currentSlide);
+  showSlideHeading(currentQuestionBankHeadingSlide);
+  questionBankNextBtn.addEventListener("click", function () {
+    nextSlide();
+  });
+  questionBankPrevBtn.addEventListener("click", function () {
+    prevSlide();
+  });
+
+
 });

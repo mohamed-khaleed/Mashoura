@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const surveyPreviousBtn = document.getElementById("surveyPreviousBtn");
   const surveys = document.querySelectorAll(".servey-item");
 
-  console.log(surveys);
+ 
 
   let questionCurrentSlide = 0;
   let surveyCurrentSlide = 0;
@@ -66,4 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
   questionsPreviousBtn.addEventListener("click", function () {
     slideQuestions('previous');
   });
+
+ 
 })

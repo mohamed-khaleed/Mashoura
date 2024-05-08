@@ -3,30 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta property="og:title" content="Online Surveys | Get Feedback with Our Survey Tool - SurveyNow">
+  <meta property="og:description" content="SurveyNow offers easy-to-use online surveys to collect feedback and insights. Create custom surveys and analyze responses. Sign up for free!">
+  <meta property="og:image" content="https://example.com/images/survey-now-logo.png">
+  <meta property="og:url" content="https://yoursurveywebsite.com">
+  <title>home</title>
   <link rel="stylesheet" href="../../common/main.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/queries.css">
+  <link rel="stylesheet" href="../../common/quesriesMain.css">
+
   <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
   
     <header class="header">
-      <a href="#">
+      <a href="index.html">
         <img class="logo" alt="mashoura logo" src="../../images/logo.svg" />
       </a>
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li ><a class="main-nav-link" href="#">home</a>
+          <li ><a class="main-nav-link" href="index.html">home</a>
           
           </li>
           <li class="feature-li">
             <a class="main-nav-link" href="#"> features</a>
             <div class="navbar-menu">
               <ul class="navbar-menu-list">
-                <a href="../surveys page/surveys.html">s</a>
                 <li>general </li>
-                <li>questions types</li>
+                <li><a href="../surveys page/surveys.html">question survey</a></li>
                 <li>surveys responses</li>
               </ul>
               <div class="imgs-container">
@@ -44,20 +49,33 @@
             </div>
           </li>
           <li>
+            <a class="main-nav-link" href="../surveys page/surveys.html">question survey</a>
+          </li>
+          <li>
             <a class="main-nav-link" href="#">pricing</a>
           </li>
           <li><a class="main-nav-link" href="#">about us</a></li>
           <li><a class="main-nav-link" href="#">contact us</a></li>
         </ul>
       </nav>
-      <ul class="main-nav-list">
+      <ul class="main-nav-list  hide-btn">
         <li><a class="main-nav-link" href="#"><svg class="arrow-down" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M2.72027 5.96657L7.06694 10.3132C7.58027 10.8266 8.42027 10.8266 8.93361 10.3132L13.2803 5.96658" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>العربيه</a></li>
         <li><a class="main-nav-link nav-cta" href="#">get started</a></li>
       </ul>
+      <button class="btn-mobile-nav">
+        <svg name="menu-outline" class="icon-mobile-nav" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35px" height=35px" viewBox="0 0 50 50">
+          <path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"></path>
+          </svg>
+          <svg class="icon-mobile-nav" name="close-outline" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35px" height="35px" viewBox="0 0 50 50">
+            <path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"></path>
+            </svg>
+      </button>
+     
     </header>
-
+  
+      
     <main>
        <section class="hero-section container">
        <div class="hero-content">
@@ -72,7 +90,7 @@
               <div>Business</div>     
             </div>
           </div>
-            
+            <span class="h1-span">Dots..</span>
           </h1>
 
           <p class="hero-text">Collects and analyzes responses from participants to gather valuable insights</p>
@@ -357,8 +375,10 @@
        </section>
        <section class="questions-bank-section container">
           <header class="questions-bank-header">
-             <h2>questions bank</h2>
-             <h2>multi languages</h2>
+            <div class="slider-headers">
+              <h2>questions bank</h2>
+              <h2>multi languages</h2>
+            </div>
              <p>Collects and analyzes responses from participants to gather valuable insights Collects and analyzes responses from participants to gather valuable insights</p>
              <div class="slider-buttons">
               <div id="bankPreviousBtn" class="slider-button-item">
@@ -403,10 +423,7 @@
                       <p>do you have any other comment,questions,or concerns?</p>
                        <button>added</button>
                     </div>
-                    <div class="form-questions-item">
-                      <p>do you have any other comment,questions,or concerns?</p>
-                       <button>added</button>
-                    </div>
+                
                    </div>
                 </div>
                 <div class="preview-part">
@@ -511,6 +528,7 @@
                  <button class="btn btn--purple">save</button>
               </form>
           </main>
+         
           <img src="../../images/heroVector.svg" alt="heroVector" class="question-bank-vector">
        </section>
        <section class="survey-section">
@@ -542,7 +560,8 @@
          </header>
          <main class="companies-logo-container ">
             <div class="companies-first-row container">
-               <div class="companies-item">
+              <div class="d-flex">
+                <div class="companies-item ">
                   <img src="../../images/notion-logo.svg" alt="notion logo" >
                   <p>notion</p>
                </div>
@@ -566,57 +585,38 @@
                 <img src="../../images/hupspot-logo.svg" alt="hupSpot logo" >
                 <p>HupSpot </p>
               </div>
+              </div>
+              
+              <div class="d-flex">
+                <div class="companies-item ">
+                  <img src="../../images/notion-logo.svg" alt="notion logo" >
+                  <p>notion</p>
+               </div>
+               <div class="companies-item">
+                 <img src="../../images/google-docs-logo.svg" alt="google docs logo" >
+                 <p>google docs</p>
+               </div>
+               <div class="companies-item">
+                <img src="../../images/similar-web-logo.svg" alt="similar web logo" >
+                 <p>similar web</p>
+              </div>
               <div class="companies-item">
-                <img src="../../images/notion-logo.svg" alt="notion logo" >
-                <p>notion</p>
-             </div>
-             <div class="companies-item">
-               <img src="../../images/google-docs-logo.svg" alt="google docs logo" >
-               <p>google docs</p>
-             </div>
-             <div class="companies-item">
-              <img src="../../images/similar-web-logo.svg" alt="similar web logo" >
-               <p>similar web</p>
-            </div>
-            <div class="companies-item">
-              <img src="../../images/google-sheets-logo.svg" alt="google sheets logo" >
-              <p>google sheets</p>
-            </div>
-            <div class="companies-item">
-              <img src="../../images/google-analytics-logo.svg" alt="google analytics logo" >
-              <p>google analytics</p>
-            </div>
-            <div class="companies-item">
-              <img src="../../images/hupspot-logo.svg" alt="hupSpot logo" >
-              <p>HupSpot </p>
-            </div>
+                <img src="../../images/google-sheets-logo.svg" alt="google sheets logo" >
+                <p>google sheets</p>
+              </div>
+              <div class="companies-item">
+                <img src="../../images/google-analytics-logo.svg" alt="google analytics logo" >
+                <p>google analytics</p>
+              </div>
+              <div class="companies-item">
+                <img src="../../images/hupspot-logo.svg" alt="hupSpot logo" >
+                <p>HupSpot </p>
+              </div>
+              </div>
             </div>
             <div class="companies-second-row container">
-              <div class="companies-item">
-                <img src="../../images/notion-logo.svg" alt="notion logo" >
-                <p>notion</p>
-              </div>
-              <div class="companies-item">
-                <img src="../../images/google-docs-logo.svg" alt="google docs logo" >
-                <p>google docs</p>
-               </div>
-               <div class="companies-item">
-                 <img src="../../images/similar-web-logo.svg" alt="similar web logo" >
-                <p>similar web</p>
-               </div>
-               <div class="companies-item">
-                 <img src="../../images/google-sheets-logo.svg" alt="google sheets logo" >
-                 <p>google sheets</p>
-               </div>
-               <div class="companies-item">
-                 <img src="../../images/google-analytics-logo.svg" alt="google analytics logo" >
-                 <p>google analytics</p>
-               </div>
-               <div class="companies-item">
-                  <img src="../../images/hupspot-logo.svg" alt="hupSpot logo" >
-                  <p>HupSpot </p>
-                </div>
-                <div class="companies-item">
+              <div class="d-flex">
+                <div class="companies-item ">
                   <img src="../../images/notion-logo.svg" alt="notion logo" >
                   <p>notion</p>
                </div>
@@ -640,8 +640,36 @@
                 <img src="../../images/hupspot-logo.svg" alt="hupSpot logo" >
                 <p>HupSpot </p>
               </div>
+              </div>
+              
+              <div class="d-flex">
+                <div class="companies-item ">
+                  <img src="../../images/notion-logo.svg" alt="notion logo" >
+                  <p>notion</p>
+               </div>
+               <div class="companies-item">
+                 <img src="../../images/google-docs-logo.svg" alt="google docs logo" >
+                 <p>google docs</p>
+               </div>
+               <div class="companies-item">
+                <img src="../../images/similar-web-logo.svg" alt="similar web logo" >
+                 <p>similar web</p>
+              </div>
+              <div class="companies-item">
+                <img src="../../images/google-sheets-logo.svg" alt="google sheets logo" >
+                <p>google sheets</p>
+              </div>
+              <div class="companies-item">
+                <img src="../../images/google-analytics-logo.svg" alt="google analytics logo" >
+                <p>google analytics</p>
+              </div>
+              <div class="companies-item">
+                <img src="../../images/hupspot-logo.svg" alt="hupSpot logo" >
+                <p>HupSpot </p>
+              </div>
+              </div>
              </div>
-            </div>
+           
          </main>
        </section>
        <section class="contact-us-section">
@@ -676,9 +704,12 @@
             </div>
          </div>
        </footer>
-    
+       
+       
     </main>
    
+    <script src="../../common/main.js"></script>
     <script src="controllers/script.js"></script>
+   
 </body>
 </html>

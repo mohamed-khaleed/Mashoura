@@ -1,19 +1,13 @@
 @keyframes infinite-scrolling-left {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
+  
   100% {
     transform: translateX(-100%);
   }
 }
-@keyframes infinite-scrolling-right {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
+
 
 @keyframes moving{
   0% {
@@ -133,4 +127,29 @@
   100%{
     transform: scale(3);
   }
+}
+
+@keyframes text-animation {
+  0% {margin-top: -1rem;}
+  10% {margin-top: -1rem;}
+  20% {margin-top: -12rem;}
+  30% {margin-top: -11rem;}
+  40% {margin-top: -22.24rem;}
+  60% {margin-top: -22.24rem;}
+  70% {margin-top: -12rem;}
+  80% {margin-top: -11rem;}
+  90% {margin-top: -1rem;}
+  100% {margin-top: -1rem;}
+}
+ @keyframes marginLeft {
+  0% {margin-left: -6rem;}
+  10% {margin-left: -6rem;}
+  20% {margin-left: -8rem;}
+  30% {margin-left: -8rem;}
+  40% {margin-left: -1rem;}
+  60% {margin-left: -1rem;}
+  70% {margin-left: -7rem;}
+  80% {margin-left: -7rem;}
+  90% {margin-left: -6rem;}
+  100% {margin-left: -6rem;}
 }
